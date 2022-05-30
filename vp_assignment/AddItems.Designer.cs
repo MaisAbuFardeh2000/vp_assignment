@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddItem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcCtegory = new System.Windows.Forms.ComboBox();
+            this.cbCtegory = new System.Windows.Forms.ComboBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -99,21 +99,22 @@
             this.label1.Text = "Add New  Item";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtcCtegory
+            // cbCtegory
             // 
-            this.txtcCtegory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcCtegory.FormattingEnabled = true;
-            this.txtcCtegory.Items.AddRange(new object[] {
+            this.cbCtegory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCtegory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCtegory.FormattingEnabled = true;
+            this.cbCtegory.Items.AddRange(new object[] {
             "Cake",
             "Donuts",
             "Soft Drink",
             "Smoothies",
             "Coffee"});
-            this.txtcCtegory.Location = new System.Drawing.Point(17, 142);
-            this.txtcCtegory.Name = "txtcCtegory";
-            this.txtcCtegory.Size = new System.Drawing.Size(266, 28);
-            this.txtcCtegory.TabIndex = 16;
-            this.txtcCtegory.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.cbCtegory.Location = new System.Drawing.Point(17, 142);
+            this.cbCtegory.Name = "cbCtegory";
+            this.cbCtegory.Size = new System.Drawing.Size(266, 28);
+            this.cbCtegory.TabIndex = 16;
+            this.cbCtegory.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // txtItemName
             // 
@@ -122,6 +123,7 @@
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(266, 26);
             this.txtItemName.TabIndex = 19;
+            this.txtItemName.TextChanged += new System.EventHandler(this.txtItemName_TextChanged);
             // 
             // txtPrice
             // 
@@ -152,7 +154,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtItemName);
-            this.Controls.Add(this.txtcCtegory);
+            this.Controls.Add(this.cbCtegory);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -173,7 +175,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox txtcCtegory;
+        private System.Windows.Forms.ComboBox cbCtegory;
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button button1;

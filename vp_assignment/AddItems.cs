@@ -41,5 +41,10 @@ namespace vp_assignment
         {
 
         }
+
+        private void txtItemName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
