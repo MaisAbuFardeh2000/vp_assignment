@@ -69,11 +69,11 @@
             // 
             this.lblpassword.AutoSize = true;
             this.lblpassword.BackColor = System.Drawing.Color.Goldenrod;
-            this.lblpassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpassword.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpassword.ForeColor = System.Drawing.Color.White;
             this.lblpassword.Location = new System.Drawing.Point(12, 207);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(80, 23);
+            this.lblpassword.Size = new System.Drawing.Size(98, 21);
             this.lblpassword.TabIndex = 21;
             this.lblpassword.Text = "password";
             // 
@@ -81,11 +81,11 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.BackColor = System.Drawing.Color.Goldenrod;
-            this.lblUserName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(12, 122);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(90, 23);
+            this.lblUserName.Size = new System.Drawing.Size(111, 21);
             this.lblUserName.TabIndex = 20;
             this.lblUserName.Text = "UserName";
             // 
@@ -109,7 +109,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Location = new System.Drawing.Point(111, 287);
             this.btnLogin.Name = "btnLogin";
@@ -132,6 +132,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.btnLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Form1";
             this.ResumeLayout(false);

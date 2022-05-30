@@ -50,7 +50,6 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnlLogOut);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnRemoveItems);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAddItems);
@@ -81,7 +80,7 @@
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button1.Location = new System.Drawing.Point(-2, -2);
+            this.button1.Location = new System.Drawing.Point(429, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(33, 31);
             this.button1.TabIndex = 9;
@@ -124,6 +123,7 @@
             this.btnAddItems.TabIndex = 5;
             this.btnAddItems.Text = "Add Items";
             this.btnAddItems.UseVisualStyleBackColor = false;
+            this.btnAddItems.Click += new System.EventHandler(this.btnAddItems_Click);
             // 
             // btnPlaceOrder
             // 
@@ -137,6 +137,7 @@
             this.btnPlaceOrder.TabIndex = 4;
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -150,10 +151,11 @@
             this.panel2.BackColor = System.Drawing.Color.Moccasin;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.lblcafe);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(236, 0);
+            this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(479, 427);
+            this.panel2.Size = new System.Drawing.Size(487, 427);
             this.panel2.TabIndex = 5;
             // 
             // lblcafe
@@ -185,6 +187,7 @@
             this.ClientSize = new System.Drawing.Size(704, 425);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashbord";
             this.Text = "Dashbord";
             this.panel1.ResumeLayout(false);

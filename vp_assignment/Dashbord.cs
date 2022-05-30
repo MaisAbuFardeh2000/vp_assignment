@@ -46,5 +46,22 @@ namespace vp_assignment
         {
             Application.Exit();
         }
+
+        private void btnAddItems_Click(object sender, EventArgs e)
+        {
+            AddItems add = new AddItems();
+            this.Hide();
+            add.ShowDialog();
+                
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            FrmPlaceOrder frm = new FrmPlaceOrder();
+            this.Hide();
+            frm.ShowDialog();
+            
+
+        }
     }
 }
