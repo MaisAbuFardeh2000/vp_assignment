@@ -63,5 +63,10 @@ namespace vp_assignment
             
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

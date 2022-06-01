@@ -38,6 +38,7 @@
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnhadditem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -76,11 +77,12 @@
             // 
             // btnAddItem
             // 
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddItem.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnAddItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAddItem.Image")));
             this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(316, 315);
+            this.btnAddItem.Location = new System.Drawing.Point(315, 313);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(161, 55);
             this.btnAddItem.TabIndex = 12;
@@ -136,6 +138,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Bisque;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(490, 12);
             this.button1.Name = "button1";
@@ -145,12 +148,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnhadditem
+            // 
+            this.btnhadditem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnhadditem.BackgroundImage")));
+            this.btnhadditem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnhadditem.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhadditem.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnhadditem.Image = ((System.Drawing.Image)(resources.GetObject("btnhadditem.Image")));
+            this.btnhadditem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhadditem.Location = new System.Drawing.Point(355, 374);
+            this.btnhadditem.Name = "btnhadditem";
+            this.btnhadditem.Size = new System.Drawing.Size(88, 33);
+            this.btnhadditem.TabIndex = 23;
+            this.btnhadditem.Text = "Home";
+            this.btnhadditem.UseVisualStyleBackColor = true;
+            this.btnhadditem.Click += new System.EventHandler(this.button2_Click);
+            // 
             // AddItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(535, 419);
+            this.Controls.Add(this.btnhadditem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtItemName);
@@ -163,6 +183,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddItems";
             this.Text = "AddItems";
+            this.Load += new System.EventHandler(this.AddItems_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +200,6 @@
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnhadditem;
     }
 }

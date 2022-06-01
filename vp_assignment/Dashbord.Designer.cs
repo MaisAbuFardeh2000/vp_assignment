@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnlLogOut = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnRemoveItems = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddItems = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblcafe = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -75,22 +75,10 @@
             this.btnlLogOut.Text = "LogOut";
             this.btnlLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnlLogOut_LinkClicked);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Moccasin;
-            this.button1.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button1.Location = new System.Drawing.Point(429, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 31);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnRemoveItems
             // 
             this.btnRemoveItems.BackColor = System.Drawing.Color.Moccasin;
+            this.btnRemoveItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemoveItems.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveItems.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnRemoveItems.Location = new System.Drawing.Point(70, 319);
@@ -103,6 +91,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Bisque;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnUpdate.Location = new System.Drawing.Point(70, 228);
@@ -115,6 +104,7 @@
             // btnAddItems
             // 
             this.btnAddItems.BackColor = System.Drawing.Color.Moccasin;
+            this.btnAddItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddItems.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItems.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnAddItems.Location = new System.Drawing.Point(70, 131);
@@ -129,6 +119,7 @@
             // 
             this.btnPlaceOrder.BackColor = System.Drawing.Color.Bisque;
             this.btnPlaceOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlaceOrder.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaceOrder.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnPlaceOrder.Location = new System.Drawing.Point(70, 43);
@@ -146,6 +137,20 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(508, 458);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Moccasin;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button1.Location = new System.Drawing.Point(429, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 31);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Moccasin;
@@ -155,8 +160,9 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(487, 427);
+            this.panel2.Size = new System.Drawing.Size(476, 425);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblcafe
             // 

@@ -34,195 +34,205 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblplace = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblcategory = new System.Windows.Forms.Label();
+            this.cbcategory = new System.Windows.Forms.ComboBox();
+            this.txtsearch = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnaddtocart = new System.Windows.Forms.Button();
+            this.numquantityupdown = new System.Windows.Forms.NumericUpDown();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.txtprice = new System.Windows.Forms.TextBox();
+            this.txtitemname = new System.Windows.Forms.TextBox();
+            this.lblitem = new System.Windows.Forms.Label();
+            this.lblquantity = new System.Windows.Forms.Label();
+            this.lblprice = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnhadditem = new System.Windows.Forms.Button();
+            this.btnremove = new System.Windows.Forms.Button();
+            this.btnprint = new System.Windows.Forms.Button();
+            this.lblgrandtotal = new System.Windows.Forms.Label();
+            this.lbltotalamount = new System.Windows.Forms.Label();
+            this.btnsearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numquantityupdown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblplace
             // 
             this.lblplace.AutoSize = true;
-            this.lblplace.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblplace.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblplace.Location = new System.Drawing.Point(12, 27);
             this.lblplace.Name = "lblplace";
-            this.lblplace.Size = new System.Drawing.Size(149, 34);
+            this.lblplace.Size = new System.Drawing.Size(153, 35);
             this.lblplace.TabIndex = 0;
             this.lblplace.Text = "Place Order";
+            this.lblplace.Click += new System.EventHandler(this.lblplace_Click);
             // 
-            // label2
+            // lblcategory
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(18, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "category";
+            this.lblcategory.AutoSize = true;
+            this.lblcategory.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategory.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblcategory.Location = new System.Drawing.Point(18, 91);
+            this.lblcategory.Name = "lblcategory";
+            this.lblcategory.Size = new System.Drawing.Size(78, 23);
+            this.lblcategory.TabIndex = 2;
+            this.lblcategory.Text = "Category";
             // 
-            // comboBox1
+            // cbcategory
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbcategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcategory.ForeColor = System.Drawing.Color.Black;
+            this.cbcategory.FormattingEnabled = true;
+            this.cbcategory.Items.AddRange(new object[] {
             "Cake",
             "Donuts",
             "Soft Drink",
             "Smoothies",
             "Coffee"});
-            this.comboBox1.Location = new System.Drawing.Point(19, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 26);
-            this.comboBox1.TabIndex = 3;
+            this.cbcategory.Location = new System.Drawing.Point(9, 117);
+            this.cbcategory.Name = "cbcategory";
+            this.cbcategory.Size = new System.Drawing.Size(142, 26);
+            this.cbcategory.TabIndex = 3;
+            this.cbcategory.SelectedIndexChanged += new System.EventHandler(this.cbcategory_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtsearch
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(22, 161);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 43);
-            this.textBox1.TabIndex = 4;
+            this.txtsearch.ForeColor = System.Drawing.Color.Black;
+            this.txtsearch.Location = new System.Drawing.Point(12, 161);
+            this.txtsearch.Multiline = true;
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(110, 33);
+            this.txtsearch.TabIndex = 4;
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(22, 220);
+            this.listView1.Location = new System.Drawing.Point(12, 220);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(139, 273);
+            this.listView1.Size = new System.Drawing.Size(178, 315);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(188, 46);
+            this.panel1.Controls.Add(this.btnaddtocart);
+            this.panel1.Controls.Add(this.numquantityupdown);
+            this.panel1.Controls.Add(this.txttotal);
+            this.panel1.Controls.Add(this.txtprice);
+            this.panel1.Controls.Add(this.txtitemname);
+            this.panel1.Controls.Add(this.lblitem);
+            this.panel1.Controls.Add(this.lblquantity);
+            this.panel1.Controls.Add(this.lblprice);
+            this.panel1.Controls.Add(this.lbltotal);
+            this.panel1.Location = new System.Drawing.Point(227, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 218);
             this.panel1.TabIndex = 6;
             // 
-            // button1
+            // btnaddtocart
             // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(352, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Add to Cart";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnaddtocart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnaddtocart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddtocart.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnaddtocart.Image = ((System.Drawing.Image)(resources.GetObject("btnaddtocart.Image")));
+            this.btnaddtocart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnaddtocart.Location = new System.Drawing.Point(352, 172);
+            this.btnaddtocart.Name = "btnaddtocart";
+            this.btnaddtocart.Size = new System.Drawing.Size(145, 39);
+            this.btnaddtocart.TabIndex = 11;
+            this.btnaddtocart.Text = "Add to Cart";
+            this.btnaddtocart.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // numquantityupdown
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(33, 114);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(169, 29);
-            this.numericUpDown1.TabIndex = 10;
+            this.numquantityupdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numquantityupdown.Location = new System.Drawing.Point(33, 114);
+            this.numquantityupdown.Name = "numquantityupdown";
+            this.numquantityupdown.Size = new System.Drawing.Size(169, 29);
+            this.numquantityupdown.TabIndex = 10;
             // 
-            // textBox4
+            // txttotal
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(295, 113);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 30);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txttotal.ForeColor = System.Drawing.Color.Black;
+            this.txttotal.Location = new System.Drawing.Point(295, 113);
+            this.txttotal.Multiline = true;
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(164, 30);
+            this.txttotal.TabIndex = 9;
+            this.txttotal.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // txtprice
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(295, 43);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 30);
-            this.textBox3.TabIndex = 8;
+            this.txtprice.ForeColor = System.Drawing.Color.Black;
+            this.txtprice.Location = new System.Drawing.Point(295, 43);
+            this.txtprice.Multiline = true;
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(164, 30);
+            this.txtprice.TabIndex = 8;
             // 
-            // textBox2
+            // txtitemname
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(44, 44);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 30);
-            this.textBox2.TabIndex = 7;
+            this.txtitemname.ForeColor = System.Drawing.Color.Black;
+            this.txtitemname.Location = new System.Drawing.Point(33, 43);
+            this.txtitemname.Multiline = true;
+            this.txtitemname.Name = "txtitemname";
+            this.txtitemname.Size = new System.Drawing.Size(158, 30);
+            this.txtitemname.TabIndex = 7;
             // 
-            // label6
+            // lblitem
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label6.Location = new System.Drawing.Point(15, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 23);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Item Name";
+            this.lblitem.AutoSize = true;
+            this.lblitem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitem.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblitem.Location = new System.Drawing.Point(15, 9);
+            this.lblitem.Name = "lblitem";
+            this.lblitem.Size = new System.Drawing.Size(95, 23);
+            this.lblitem.TabIndex = 6;
+            this.lblitem.Text = "Item Name";
             // 
-            // label5
+            // lblquantity
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label5.Location = new System.Drawing.Point(15, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Quantity";
+            this.lblquantity.AutoSize = true;
+            this.lblquantity.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblquantity.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblquantity.Location = new System.Drawing.Point(15, 82);
+            this.lblquantity.Name = "lblquantity";
+            this.lblquantity.Size = new System.Drawing.Size(76, 23);
+            this.lblquantity.TabIndex = 5;
+            this.lblquantity.Text = "Quantity";
+            this.lblquantity.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label4
+            // lblprice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label4.Location = new System.Drawing.Point(252, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "price";
+            this.lblprice.AutoSize = true;
+            this.lblprice.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprice.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblprice.Location = new System.Drawing.Point(252, 9);
+            this.lblprice.Name = "lblprice";
+            this.lblprice.Size = new System.Drawing.Size(48, 23);
+            this.lblprice.TabIndex = 4;
+            this.lblprice.Text = "price";
             // 
-            // label3
+            // lbltotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label3.Location = new System.Drawing.Point(251, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Total";
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lbltotal.Location = new System.Drawing.Point(251, 82);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(49, 23);
+            this.lbltotal.TabIndex = 3;
+            this.lbltotal.Text = "Total";
             // 
             // dataGridView1
             // 
@@ -234,7 +244,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(223, 292);
+            this.dataGridView1.Location = new System.Drawing.Point(262, 251);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(444, 201);
             this.dataGridView1.TabIndex = 7;
@@ -284,18 +294,107 @@
             this.Column4.HeaderText = "Price";
             this.Column4.Name = "Column4";
             // 
+            // btnhadditem
+            // 
+            this.btnhadditem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnhadditem.BackgroundImage")));
+            this.btnhadditem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnhadditem.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhadditem.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnhadditem.Image = ((System.Drawing.Image)(resources.GetObject("btnhadditem.Image")));
+            this.btnhadditem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhadditem.Location = new System.Drawing.Point(686, 547);
+            this.btnhadditem.Name = "btnhadditem";
+            this.btnhadditem.Size = new System.Drawing.Size(88, 33);
+            this.btnhadditem.TabIndex = 24;
+            this.btnhadditem.Text = "Home";
+            this.btnhadditem.UseVisualStyleBackColor = true;
+            this.btnhadditem.Click += new System.EventHandler(this.btnhadditem_Click);
+            // 
+            // btnremove
+            // 
+            this.btnremove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnremove.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnremove.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnremove.Image = ((System.Drawing.Image)(resources.GetObject("btnremove.Image")));
+            this.btnremove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnremove.Location = new System.Drawing.Point(262, 496);
+            this.btnremove.Name = "btnremove";
+            this.btnremove.Size = new System.Drawing.Size(110, 39);
+            this.btnremove.TabIndex = 25;
+            this.btnremove.Text = "Remove";
+            this.btnremove.UseVisualStyleBackColor = true;
+            this.btnremove.Click += new System.EventHandler(this.btnremove_Click);
+            // 
+            // btnprint
+            // 
+            this.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnprint.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprint.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnprint.Image = ((System.Drawing.Image)(resources.GetObject("btnprint.Image")));
+            this.btnprint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnprint.Location = new System.Drawing.Point(596, 496);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(110, 39);
+            this.btnprint.TabIndex = 26;
+            this.btnprint.Text = "print";
+            this.btnprint.UseVisualStyleBackColor = true;
+            this.btnprint.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // lblgrandtotal
+            // 
+            this.lblgrandtotal.AutoSize = true;
+            this.lblgrandtotal.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgrandtotal.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblgrandtotal.Location = new System.Drawing.Point(446, 455);
+            this.lblgrandtotal.Name = "lblgrandtotal";
+            this.lblgrandtotal.Size = new System.Drawing.Size(98, 23);
+            this.lblgrandtotal.TabIndex = 27;
+            this.lblgrandtotal.Text = "Grand Total";
+            // 
+            // lbltotalamount
+            // 
+            this.lbltotalamount.BackColor = System.Drawing.Color.SeaShell;
+            this.lbltotalamount.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalamount.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lbltotalamount.Location = new System.Drawing.Point(430, 496);
+            this.lbltotalamount.Name = "lbltotalamount";
+            this.lbltotalamount.Size = new System.Drawing.Size(114, 39);
+            this.lbltotalamount.TabIndex = 28;
+            this.lbltotalamount.Text = "Rs.00";
+            this.lbltotalamount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnsearch
+            // 
+            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsearch.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearch.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnsearch.Image = ((System.Drawing.Image)(resources.GetObject("btnsearch.Image")));
+            this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsearch.Location = new System.Drawing.Point(128, 161);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(93, 33);
+            this.btnsearch.TabIndex = 29;
+            this.btnsearch.Text = "Search";
+            this.btnsearch.UseVisualStyleBackColor = true;
+            // 
             // FrmPlaceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
-            this.ClientSize = new System.Drawing.Size(743, 540);
+            this.ClientSize = new System.Drawing.Size(786, 592);
+            this.Controls.Add(this.btnsearch);
+            this.Controls.Add(this.lbltotalamount);
+            this.Controls.Add(this.lblgrandtotal);
+            this.Controls.Add(this.btnprint);
+            this.Controls.Add(this.btnremove);
+            this.Controls.Add(this.btnhadditem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtsearch);
+            this.Controls.Add(this.cbcategory);
+            this.Controls.Add(this.lblcategory);
             this.Controls.Add(this.lblplace);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPlaceOrder";
@@ -303,7 +402,7 @@
             this.Load += new System.EventHandler(this.FrmPlaceOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numquantityupdown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,24 +412,30 @@
         #endregion
 
         private System.Windows.Forms.Label lblplace;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblcategory;
+        private System.Windows.Forms.ComboBox cbcategory;
+        private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblitem;
+        private System.Windows.Forms.Label lblquantity;
+        private System.Windows.Forms.Label lblprice;
+        private System.Windows.Forms.Label lbltotal;
+        private System.Windows.Forms.NumericUpDown numquantityupdown;
+        private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.TextBox txtprice;
+        private System.Windows.Forms.TextBox txtitemname;
+        private System.Windows.Forms.Button btnaddtocart;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnhadditem;
+        private System.Windows.Forms.Button btnremove;
+        private System.Windows.Forms.Button btnprint;
+        private System.Windows.Forms.Label lblgrandtotal;
+        private System.Windows.Forms.Label lbltotalamount;
+        private System.Windows.Forms.Button btnsearch;
     }
 }

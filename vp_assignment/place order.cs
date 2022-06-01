@@ -12,6 +12,9 @@ namespace vp_assignment
 {
     public partial class FrmPlaceOrder : Form
     {
+        Function fn = new function();
+        string query;
+
         public FrmPlaceOrder()
         {
             InitializeComponent();
@@ -29,6 +32,40 @@ namespace vp_assignment
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnhadditem_Click(object sender, EventArgs e)
+        {
+            Dashbord frm = new Dashbord();
+            this.Hide();
+            frm.ShowDialog();
+        }
+
+        private void lblplace_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void cbcategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string category=cbcategory.Text;
+            query = "select name from items where category='"+category+"'";
+
+        }
+
+        private void btnremove_Click(object sender, EventArgs e)
         {
 
         }
