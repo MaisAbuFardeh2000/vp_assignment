@@ -12,8 +12,7 @@ namespace vp_assignment
 {
     public partial class FrmPlaceOrder : Form
     {
-        Function fn = new function();
-        string query;
+        
 
         public FrmPlaceOrder()
         {
@@ -60,12 +59,16 @@ namespace vp_assignment
         
         private void cbcategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string category=cbcategory.Text;
-            query = "select name from items where category='"+category+"'";
+            
 
         }
 
         private void btnremove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

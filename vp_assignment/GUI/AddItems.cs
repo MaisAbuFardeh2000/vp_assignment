@@ -59,7 +59,7 @@ namespace vp_assignment
 
         private void AddItems_Load(object sender, EventArgs e)
         {
-            btnAddItem.Visible=false;
+            
         }
     }
 }

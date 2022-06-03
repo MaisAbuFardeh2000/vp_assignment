@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPlaceOrder));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblplace = new System.Windows.Forms.Label();
             this.lblcategory = new System.Windows.Forms.Label();
             this.cbcategory = new System.Windows.Forms.ComboBox();
@@ -68,7 +68,7 @@
             // 
             this.lblplace.AutoSize = true;
             this.lblplace.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblplace.Location = new System.Drawing.Point(12, 27);
+            this.lblplace.Location = new System.Drawing.Point(37, 29);
             this.lblplace.Name = "lblplace";
             this.lblplace.Size = new System.Drawing.Size(153, 35);
             this.lblplace.TabIndex = 0;
@@ -80,7 +80,7 @@
             this.lblcategory.AutoSize = true;
             this.lblcategory.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcategory.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblcategory.Location = new System.Drawing.Point(18, 91);
+            this.lblcategory.Location = new System.Drawing.Point(22, 79);
             this.lblcategory.Name = "lblcategory";
             this.lblcategory.Size = new System.Drawing.Size(78, 23);
             this.lblcategory.TabIndex = 2;
@@ -98,7 +98,7 @@
             "Soft Drink",
             "Smoothies",
             "Coffee"});
-            this.cbcategory.Location = new System.Drawing.Point(9, 117);
+            this.cbcategory.Location = new System.Drawing.Point(26, 117);
             this.cbcategory.Name = "cbcategory";
             this.cbcategory.Size = new System.Drawing.Size(142, 26);
             this.cbcategory.TabIndex = 3;
@@ -107,7 +107,7 @@
             // txtsearch
             // 
             this.txtsearch.ForeColor = System.Drawing.Color.Black;
-            this.txtsearch.Location = new System.Drawing.Point(12, 161);
+            this.txtsearch.Location = new System.Drawing.Point(26, 161);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(110, 33);
@@ -116,11 +116,12 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 220);
+            this.listView1.Location = new System.Drawing.Point(43, 220);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(178, 315);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -134,7 +135,7 @@
             this.panel1.Controls.Add(this.lblquantity);
             this.panel1.Controls.Add(this.lblprice);
             this.panel1.Controls.Add(this.lbltotal);
-            this.panel1.Location = new System.Drawing.Point(227, 27);
+            this.panel1.Location = new System.Drawing.Point(241, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 218);
             this.panel1.TabIndex = 6;
@@ -146,7 +147,7 @@
             this.btnaddtocart.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnaddtocart.Image = ((System.Drawing.Image)(resources.GetObject("btnaddtocart.Image")));
             this.btnaddtocart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnaddtocart.Location = new System.Drawing.Point(352, 172);
+            this.btnaddtocart.Location = new System.Drawing.Point(351, 163);
             this.btnaddtocart.Name = "btnaddtocart";
             this.btnaddtocart.Size = new System.Drawing.Size(145, 39);
             this.btnaddtocart.TabIndex = 11;
@@ -167,6 +168,7 @@
             this.txttotal.Location = new System.Drawing.Point(295, 113);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(164, 30);
             this.txttotal.TabIndex = 9;
             this.txttotal.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -177,6 +179,7 @@
             this.txtprice.Location = new System.Drawing.Point(295, 43);
             this.txtprice.Multiline = true;
             this.txtprice.Name = "txtprice";
+            this.txtprice.ReadOnly = true;
             this.txtprice.Size = new System.Drawing.Size(164, 30);
             this.txtprice.TabIndex = 8;
             // 
@@ -186,6 +189,7 @@
             this.txtitemname.Location = new System.Drawing.Point(33, 43);
             this.txtitemname.Multiline = true;
             this.txtitemname.Name = "txtitemname";
+            this.txtitemname.ReadOnly = true;
             this.txtitemname.Size = new System.Drawing.Size(158, 30);
             this.txtitemname.TabIndex = 7;
             // 
@@ -219,9 +223,9 @@
             this.lblprice.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lblprice.Location = new System.Drawing.Point(252, 9);
             this.lblprice.Name = "lblprice";
-            this.lblprice.Size = new System.Drawing.Size(48, 23);
+            this.lblprice.Size = new System.Drawing.Size(47, 23);
             this.lblprice.TabIndex = 4;
-            this.lblprice.Text = "price";
+            this.lblprice.Text = "Price";
             // 
             // lbltotal
             // 
@@ -252,45 +256,45 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Moccasin;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Moccasin;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column1.HeaderText = "Item Name";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Moccasin;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Moccasin;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column2.HeaderText = "Unit price";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Moccasin;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Moccasin;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column3.HeaderText = "Quantity";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Moccasin;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Moccasin;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column4.HeaderText = "Price";
             this.Column4.Name = "Column4";
             // 
@@ -358,7 +362,7 @@
             this.lbltotalamount.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lbltotalamount.Location = new System.Drawing.Point(430, 496);
             this.lbltotalamount.Name = "lbltotalamount";
-            this.lbltotalamount.Size = new System.Drawing.Size(114, 39);
+            this.lbltotalamount.Size = new System.Drawing.Size(123, 39);
             this.lbltotalamount.TabIndex = 28;
             this.lbltotalamount.Text = "Rs.00";
             this.lbltotalamount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -370,7 +374,7 @@
             this.btnsearch.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnsearch.Image = ((System.Drawing.Image)(resources.GetObject("btnsearch.Image")));
             this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsearch.Location = new System.Drawing.Point(128, 161);
+            this.btnsearch.Location = new System.Drawing.Point(142, 161);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(93, 33);
             this.btnsearch.TabIndex = 29;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace vp_assignment
 {
-    public partial class Updateitems : Form
+    public partial class frmupdateitems : Form
     {
-        public Updateitems()
+        public frmupdateitems()
         {
             InitializeComponent();
         }
@@ -21,6 +21,16 @@ namespace vp_assignment
 
         {
             
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
